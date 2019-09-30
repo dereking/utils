@@ -9,8 +9,8 @@ import(
 
 func Download(url, file string) error {
 	res, _ := http.Get(url)
-    file, _ := os.Create(file)
-    io.Copy(file, res.Body) 
+    file1, _ := os.Create(file)
+    io.Copy(file1, res.Body) 
 	
 	return nil
 }
