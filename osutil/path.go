@@ -3,6 +3,8 @@ package osutil
 import (
 	"bytes"
 	"errors"
+	"fmt"
+	"io/ioutil"
 	"os"
 	"os/exec"
 	"os/user"
@@ -28,6 +30,11 @@ func Home() (string, error) {
 
 	// Unix-like system, so just assume Unix
 	return homeUnix()
+}
+
+func TempFile(name string) string {
+	tmp, _ := ioutil.TempDir("", "")
+	return fmt.Sprintf("%s%c%s", tmp, os.PathSeparator, name)
 }
 
 func homeUnix() (string, error) {

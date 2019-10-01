@@ -1,16 +1,26 @@
 package netutil
 
-import(
- 
-    "io"
-    "net/http"
-    "os"
+import (
+	"io"
+	"net/http"
+	"os"
 )
 
 func Download(url, file string) error {
-	res, _ := http.Get(url)
-    file1, _ := os.Create(file)
-    io.Copy(file1, res.Body) 
-	
+	res, err := http.Get(url)
+	if err != nil {
+		return err
+	}
+	file1, err := os.Create(file)
+	if err != nil {
+		return err
+	}
+	defer file1.Close()
+
+	_, err = io.Copy(file1, res.Body)
+	if err != nil {
+		return err
+	}
+
 	return nil
 }
