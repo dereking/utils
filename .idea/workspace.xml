@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fdcb6e2f-ca90-4ca3-aab7-43e4c68bb75f" name="Default Changelist" comment="a">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/utils.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netutil/netutil_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netutil/netutil.go" beforeDir="false" afterPath="$PROJECT_DIR$/netutil/netutil.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osutil/path.go" beforeDir="false" afterPath="$PROJECT_DIR$/osutil/path.go" afterDir="false" />
+    <list default="true" id="fdcb6e2f-ca90-4ca3-aab7-43e4c68bb75f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
