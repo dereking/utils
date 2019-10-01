@@ -1,8 +1,11 @@
 package main
 
-import "log"
+import (
+	"github.com/Dereking/utils/strutil"
+	"log"
+)
 
 func main(){
 
-	log.Println("d")
+	log.Println(strutil.StrToTime("19 SEP 2019"))
 }
