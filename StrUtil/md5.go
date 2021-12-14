@@ -1,4 +1,4 @@
-package strutil
+package StrUtil
 
 import (
 	"crypto/md5"

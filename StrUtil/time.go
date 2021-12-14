@@ -1,11 +1,11 @@
-﻿package strutil
+﻿package StrUtil
 
 import (
- // "github.com/noaway/dateparse"
-  "time"
+	// "github.com/noaway/dateparse"
+	"time"
 )
 
-func StrToTime(str string) (time.Time ,error) {
+func StrToTime(str string) (time.Time, error) {
 	//return dateparse.ParseAny(str), nil
-	return time.Now(),nil
+	return time.Now(), nil
 }

@@ -3,10 +3,10 @@ package utils
 import (
 	"log"
 
-	"github.com/Dereking/utils/strutil"
+	"github.com/Dereking/utils/StrUtil"
 )
 
 func main() {
 
-	log.Println(strutil.StrToTime("19 SEP 2019"))
+	log.Println(StrUtil.StrToTime("19 SEP 2019"))
 }
