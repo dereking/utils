@@ -10,6 +10,7 @@ import (
 	"os/user"
 	"runtime"
 	"strings"
+	"path/filepath"
 )
 
 // Home returns the home directory for the executing user.
@@ -82,4 +83,10 @@ func PathExists(path string) (bool, error) {
 		return false, nil
 	}
 	return false, err
+}
+
+//获取程序执行目录
+func GetExePath() (string, error) {
+    path, err := filepath.Abs(filepath.Dir(os.Args[0]))
+    return path, err
 }
