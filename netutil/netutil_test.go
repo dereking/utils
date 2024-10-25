@@ -1,9 +1,10 @@
 package netutil
 
 import (
-	"github.com/Dereking/utils/osutil"
 	"os"
 	"testing"
+
+	"github.com/dereking/utils/osutil"
 )
 
 func TestDownload(t *testing.T) {
