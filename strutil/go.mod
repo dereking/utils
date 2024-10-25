@@ -1,4 +1,4 @@
-module strutil
+module github.com/dereking/utils/strutil
 
 go 1.22.2
 
