@@ -8,9 +8,9 @@ import (
 	"os"
 	"os/exec"
 	"os/user"
+	"path/filepath"
 	"runtime"
 	"strings"
-	"path/filepath"
 )
 
 // Home returns the home directory for the executing user.
@@ -85,8 +85,21 @@ func PathExists(path string) (bool, error) {
 	return false, err
 }
 
-//获取程序执行目录
+// 获取程序执行目录
 func GetExePath() (string, error) {
-    path, err := filepath.Abs(filepath.Dir(os.Args[0]))
-    return path, err
+	path, err := filepath.Abs(filepath.Dir(os.Args[0]))
+	return path, err
+}
+
+// 检查目录是否存在，不存在则创建.
+// dirOrFilePath: 目录或文件路径
+// isFile: 是否是文件. true: dirOrFilePath是文件路径; false: dirOrFilePath是目录路径.
+func CheckAndCreateDir(dirOrFilePath string, isFile bool) error {
+	if isFile {
+		dirOrFilePath = filepath.Dir(dirOrFilePath)
+	}
+	if ok, _ := PathExists(dirOrFilePath); !ok {
+		return os.MkdirAll(dirOrFilePath, os.ModePerm)
+	}
+	return nil
 }
